@@ -1,0 +1,66 @@
+/* Estilos para o Header */
+header {
+    background-color: #000;
+    padding: 40px 0;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+    /* Efeito de brilho no fundo */
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ff00ff;
+    /* Cor neon */
+    text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    /* Efeito de neon */
+    margin: 0;
+    letter-spacing: 2px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+    /* Animação de brilho */
+}
+
+header h1:hover {
+    animation: glow 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+    }
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Ajustando para ficar no meio verticalmente */
+    left: 50%;
+    width: 200px;
+    height: 5px;
+    background-color: #ff00ff;
+    /* Linha de brilho abaixo do título */
+    transform: translateX(-50%) translateY(-50%);
+    animation: pulsate 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        width: 200px;
+        opacity: 0.8;
+    }
+
+    50% {
+        width: 250px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 200px;
+        opacity: 0.8;
+    }
+}

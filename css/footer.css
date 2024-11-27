@@ -1,0 +1,28 @@
+footer {
+    background-color: #000;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 1rem;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .fusing-media {
+    color: #ff00ff;
+    font-weight: bold;
+    text-decoration: underline;
+    animation: neon-text 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-text {
+    from {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+    }
+}
